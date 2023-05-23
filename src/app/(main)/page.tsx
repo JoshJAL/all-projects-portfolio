@@ -24,7 +24,7 @@ export default function Home() {
         <section>
           <SectionTitle>Projects List</SectionTitle>
           <div className='flex flex-col gap-2 pt-2'>
-            <FancyLink href='/project/weatherApp'>
+            <FancyLink href='/projects/weatherApp' target='_self'>
               <p className='text-lg'>Weather App</p>
             </FancyLink>
           </div>
