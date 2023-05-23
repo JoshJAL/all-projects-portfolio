@@ -1,9 +1,9 @@
 'use client';
 
+import LoadingSpinner from '@/components/loadingSpinner/LoadingSpinner';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styles from './weatherApp.module.css';
-import LoadingSpinner from '@/components/loadingSpinner/LoadingSpinner';
 
 export default function WeatherHome() {
   const baseURL = 'https://api.weatherapi.com/v1';
