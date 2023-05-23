@@ -6,7 +6,7 @@ import styles from './weatherApp.module.css';
 import LoadingSpinner from '@/components/loadingSpinner/LoadingSpinner';
 
 export default function WeatherHome() {
-  const baseURL = 'http://api.weatherapi.com/v1';
+  const baseURL = 'https://api.weatherapi.com/v1';
 
   type WeatherData = {
     cloud: number;
