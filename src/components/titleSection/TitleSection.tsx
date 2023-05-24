@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function TitleSection() {
   return (
-    <section className='flex-col items-center w-full md:flex'>
+    <section className='flex flex-col items-center w-full md:flex-row'>
       <div className='flex flex-col w-full md:w-1/2'>
         <h2 className='text-3xl font-semibold text-center md:text-left'>Joshua Levine</h2>
         <h3 className='text-xl text-center md:text-left'>Web and Software Developer</h3>
