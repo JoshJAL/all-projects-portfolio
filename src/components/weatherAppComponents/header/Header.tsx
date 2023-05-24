@@ -4,7 +4,7 @@ import HeaderLink from './HeaderLink';
 
 export default function Header() {
   return (
-    <header className='fixed w-full py-2 mx-auto backdrop-blur-md'>
+    <header className='fixed z-50 w-full py-2 mx-auto backdrop-blur-md'>
       <nav className='flex max-w-3xl px-5 mx-auto'>
         <div>
           <Link href={'/projects/weatherApp'}>

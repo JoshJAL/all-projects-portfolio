@@ -2,6 +2,7 @@ import AboutSection from '@/components/aboutSection/AboutSection';
 import Blurb from '@/components/blurb/Blurb';
 import FancyLink from '@/components/fancyLink/FancyLink';
 import LinkButton from '@/components/fancyLink/LinkButton';
+import ProjectItem from '@/components/projectItem/ProjectItem';
 import SectionTitle from '@/components/sectionTitle/SectionTitle';
 import TitleSection from '@/components/titleSection/TitleSection';
 
@@ -24,9 +25,11 @@ export default function Home() {
         <section>
           <SectionTitle>Projects List</SectionTitle>
           <div className='flex flex-col gap-2 pt-2'>
-            <FancyLink href='/projects/weatherApp' target='_self'>
-              <p className='text-lg'>Weather App</p>
-            </FancyLink>
+            <ProjectItem
+              href='/projects/weatherApp'
+              title='Weather App'
+              description='Get current weather information for your area or a random area'
+            />
           </div>
         </section>
       </div>

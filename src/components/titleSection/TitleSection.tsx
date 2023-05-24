@@ -3,10 +3,10 @@ import React from 'react';
 
 export default function TitleSection() {
   return (
-    <section className='flex items-center w-full'>
-      <div className='flex flex-col w-1/2'>
-        <h2 className='text-3xl font-semibold'>Joshua Levine</h2>
-        <h3 className='text-xl'>Web and Software Developer</h3>
+    <section className='flex-col items-center w-full md:flex'>
+      <div className='flex flex-col w-full md:w-1/2'>
+        <h2 className='text-3xl font-semibold text-center md:text-left'>Joshua Levine</h2>
+        <h3 className='text-xl text-center md:text-left'>Web and Software Developer</h3>
         <div>
           <ul className='px-6 text-lg list-disc'>
             <li>Bachelors Degree from the University of Central Florida</li>
@@ -14,7 +14,7 @@ export default function TitleSection() {
           </ul>
         </div>
       </div>
-      <div className='flex items-center justify-end w-1/2'>
+      <div className='flex items-center justify-center w-full py-3 md:justify-end md:w-1/2 md:py-0'>
         <Image
           src={'/images/happyHeadshot.jpg'}
           height={361}
