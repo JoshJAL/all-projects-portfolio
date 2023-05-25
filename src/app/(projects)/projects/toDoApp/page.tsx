@@ -1,5 +1,6 @@
 'use client';
 
+import LoadingSpinner from '@/components/loadingSpinner/LoadingSpinner';
 import AddToDoForm from '@/components/toDoAppcomponents/form/AddToDoForm';
 import IndividualTodo from '@/components/toDoAppcomponents/inidvidualToDo/IndividualTodo';
 import { createToDo, deleteToDo, getToDos, updateCompleted } from '@/functions/toDoAppFunctions';
@@ -7,7 +8,7 @@ import { ToDo } from '@/types/toDoTypes';
 import React, { useState, useEffect } from 'react';
 
 export default function ToDoApp() {
-  const [toDos, setToDos] = useState<ToDo[]>([]);
+  const [toDos, setToDos] = useState<ToDo[] | null>(null);
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
@@ -26,9 +27,11 @@ export default function ToDoApp() {
     setToDoList();
   }, []);
 
+  if (!toDos) return <LoadingSpinner />;
+
   async function handleCompleted(toDo: ToDo, index: number) {
     await updateCompleted(toDo.id, toDo.completed);
-    const updatedToDos = [...toDos];
+    const updatedToDos = [...(toDos as ToDo[])];
     updatedToDos[index].completed = !updatedToDos[index].completed;
     setToDos(updatedToDos);
   }
@@ -36,7 +39,7 @@ export default function ToDoApp() {
   async function handleDelete(e: React.MouseEvent<HTMLButtonElement>, toDo: ToDo, index: number) {
     e.preventDefault();
     await deleteToDo(toDo.id);
-    const updatedToDos = [...toDos];
+    const updatedToDos = [...(toDos as ToDo[])];
     updatedToDos.splice(index, 1);
     setToDos(updatedToDos);
   }
@@ -44,7 +47,7 @@ export default function ToDoApp() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
-    const updatedToDos = [...toDos];
+    const updatedToDos = [...(toDos as ToDo[])];
     const newToDo = await createToDo(title, description);
     updatedToDos.push(newToDo[0]);
     updatedToDos.sort((a, b) => {
