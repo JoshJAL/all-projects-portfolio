@@ -5,8 +5,8 @@ import Header from '@/components/weatherAppComponents/header/Header';
 import React from 'react';
 
 export const metadata = {
-  title: 'Project Portfolio',
-  description: 'A place to keep and share all of my projects',
+  title: 'Weather App',
+  description: 'Get the weather for your local area or a random area',
   icons: {
     icon: '/weatherIcon.svg'
   }
