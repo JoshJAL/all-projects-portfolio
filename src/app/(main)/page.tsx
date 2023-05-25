@@ -1,6 +1,5 @@
 import AboutSection from '@/components/aboutSection/AboutSection';
 import Blurb from '@/components/blurb/Blurb';
-import FancyLink from '@/components/fancyLink/FancyLink';
 import LinkButton from '@/components/fancyLink/LinkButton';
 import ProjectItem from '@/components/projectItem/ProjectItem';
 import SectionTitle from '@/components/sectionTitle/SectionTitle';
@@ -30,6 +29,7 @@ export default function Home() {
               title='Weather App'
               description='Get current weather information for your area or a random area'
             />
+            <ProjectItem href='/projects/toDoApp' title='To Do App' description='Create and manage your to do list' />
           </div>
         </section>
       </div>

@@ -5,7 +5,10 @@ import Header from '@/components/header/Header';
 
 export const metadata = {
   title: 'Project Portfolio',
-  description: 'A place to keep and share all of my projects'
+  description: 'A place to keep and share all of my projects',
+  icons: {
+    icon: '/mainIcon.svg'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
